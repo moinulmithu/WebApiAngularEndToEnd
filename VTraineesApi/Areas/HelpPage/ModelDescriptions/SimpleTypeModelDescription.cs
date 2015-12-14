@@ -1,0 +1,6 @@
+namespace VTraineesApi.Areas.HelpPage.ModelDescriptions
+{
+    public class SimpleTypeModelDescription : ModelDescription
+    {
+    }
+}

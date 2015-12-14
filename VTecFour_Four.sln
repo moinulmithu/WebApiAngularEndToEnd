@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VTecFour_Four", "VTecFour_Four\VTecFour_Four.csproj", "{C1793512-BDB8-4FBD-A4B0-A8FFBCE7CF41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{5A96682F-5E15-477F-9831-06B2FD6580AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VTraineesApi", "VTraineesApi\VTraineesApi.csproj", "{A4771C35-68DA-4EB6-A2E2-4567B9C40EE9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1793512-BDB8-4FBD-A4B0-A8FFBCE7CF41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1793512-BDB8-4FBD-A4B0-A8FFBCE7CF41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1793512-BDB8-4FBD-A4B0-A8FFBCE7CF41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1793512-BDB8-4FBD-A4B0-A8FFBCE7CF41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A96682F-5E15-477F-9831-06B2FD6580AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A96682F-5E15-477F-9831-06B2FD6580AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A96682F-5E15-477F-9831-06B2FD6580AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A96682F-5E15-477F-9831-06B2FD6580AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4771C35-68DA-4EB6-A2E2-4567B9C40EE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4771C35-68DA-4EB6-A2E2-4567B9C40EE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4771C35-68DA-4EB6-A2E2-4567B9C40EE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4771C35-68DA-4EB6-A2E2-4567B9C40EE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
