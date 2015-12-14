@@ -17,9 +17,8 @@ namespace DataAccess
         public int Id { get; set; }
         public Nullable<int> TraineeId { get; set; }
         public Nullable<int> CourseId { get; set; }
-        public int CourseId1 { get; set; }
     
-        public virtual Trainee Trainee2 { get; set; }
         public virtual Course Course { get; set; }
+        public virtual Trainee Trainee1 { get; set; }
     }
 }

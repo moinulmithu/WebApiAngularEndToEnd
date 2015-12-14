@@ -13,10 +13,10 @@ namespace DataAccess
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class VTraineesDBEntities : DbContext
+    public partial class VTraineesDBEntitiesOne : DbContext
     {
-        public VTraineesDBEntities()
-            : base("name=VTraineesDBEntities")
+        public VTraineesDBEntitiesOne()
+            : base("name=VTraineesDBEntitiesOne")
         {
         }
     

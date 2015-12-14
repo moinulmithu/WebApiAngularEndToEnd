@@ -52,61 +52,59 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Course.cs">
-      <DependentUpon>VTraineesDBModel.tt</DependentUpon>
+      <DependentUpon>VTraineesModelDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Department.cs">
-      <DependentUpon>VTraineesDBModel.tt</DependentUpon>
+      <DependentUpon>VTraineesModelDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Enrollment.cs">
-      <DependentUpon>VTraineesDBModel.tt</DependentUpon>
+      <DependentUpon>VTraineesModelDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Trainee.cs">
-      <DependentUpon>VTraineesDBModel.tt</DependentUpon>
+      <DependentUpon>VTraineesModelDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="VTraineesDBModel.Context.cs">
+    <Compile Include="VTraineesModelDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>VTraineesDBModel.Context.tt</DependentUpon>
+      <DependentUpon>VTraineesModelDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="VTraineesDBModel.cs">
+    <Compile Include="VTraineesModelDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>VTraineesDBModel.tt</DependentUpon>
+      <DependentUpon>VTraineesModelDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="VTraineesDBModel.Designer.cs">
+    <Compile Include="VTraineesModelDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>VTraineesDBModel.edmx</DependentUpon>
+      <DependentUpon>VTraineesModelDB.edmx</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="VTraineesDBModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>VTraineesDBModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
     <None Include="packages.config" />
-    <None Include="VTraineesDBModel.edmx.diagram">
-      <DependentUpon>VTraineesDBModel.edmx</DependentUpon>
+    <EntityDeploy Include="VTraineesModelDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>VTraineesModelDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="VTraineesModelDB.edmx.diagram">
+      <DependentUpon>VTraineesModelDB.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="VTraineesDBModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>VTraineesDBModel.edmx</DependentUpon>
-      <LastGenOutput>VTraineesDBModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="VTraineesDBModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>VTraineesDBModel.edmx</DependentUpon>
-      <LastGenOutput>VTraineesDBModel.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="VTraineesModelDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VTraineesModelDB.edmx</DependentUpon>
+      <LastGenOutput>VTraineesModelDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="VTraineesModelDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VTraineesModelDB.edmx</DependentUpon>
+      <LastGenOutput>VTraineesModelDB.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

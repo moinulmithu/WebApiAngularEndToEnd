@@ -17,7 +17,7 @@ namespace DataAccess
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Trainee()
         {
-            this.Enrollments2 = new HashSet<Enrollment>();
+            this.Enrollments1 = new HashSet<Enrollment>();
         }
     
         public int Id { get; set; }
@@ -27,6 +27,6 @@ namespace DataAccess
     
         public virtual Department Department { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Enrollment> Enrollments2 { get; set; }
+        public virtual ICollection<Enrollment> Enrollments1 { get; set; }
     }
 }

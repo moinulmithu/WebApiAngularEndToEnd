@@ -4,14 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="fee1f1d31280493d8d1f66523de34c9e" Name="Diagram1">
-        <EntityTypeShape EntityType="VTraineesDBModel.Course" Width="1.5" PointX="3.125" PointY="3.875" IsExpanded="true" />
+      <Diagram DiagramId="d3eaf221e5f84dfeb4eae7f6e267d9df" Name="Diagram1">
+        <EntityTypeShape EntityType="VTraineesDBModel.Course" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
         <EntityTypeShape EntityType="VTraineesDBModel.Department" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="VTraineesDBModel.Enrollment" Width="1.5" PointX="5.875" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VTraineesDBModel.Enrollment" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="VTraineesDBModel.Trainee" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="VTraineesDBModel.FK__Enrollmen__Cours__2C3393D0" ManuallyRouted="false" />
         <AssociationConnector Association="VTraineesDBModel.FK__Trainee__Departm__20C1E124" ManuallyRouted="false" />
-        <AssociationConnector Association="VTraineesDBModel.FK__Enrollmen__Train__276EDEB3" ManuallyRouted="false" />
-        <AssociationConnector Association="VTraineesDBModel.CourseEnrollment" />
+        <AssociationConnector Association="VTraineesDBModel.FK__Enrollmen__Train__239E4DCF" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

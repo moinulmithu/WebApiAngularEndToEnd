@@ -23,7 +23,6 @@ namespace DataAccess
         public int Id { get; set; }
         public string Name { get; set; }
         public Nullable<int> Credit { get; set; }
-        public int EnrollmentId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Enrollment> Enrollments { get; set; }
