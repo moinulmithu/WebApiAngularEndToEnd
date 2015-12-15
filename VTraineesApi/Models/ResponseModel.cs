@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccess;
 
 namespace VTraineesApi.Models
 {
     public class ResponseModel
     {
+
+
         public ResponseModel(object data = null, bool isSuccess = true, string message = "Success")
         {
             IsSuccess = isSuccess;

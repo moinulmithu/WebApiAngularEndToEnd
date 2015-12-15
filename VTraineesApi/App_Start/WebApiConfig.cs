@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Formatting;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace VTraineesApi
 {
@@ -10,6 +11,7 @@ namespace VTraineesApi
     {
         public static void Register(HttpConfiguration config)
         {
+            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
             // Web API configuration and services
             config.Formatters.Clear();
             config.Formatters.Add(new JsonMediaTypeFormatter());
