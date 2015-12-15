@@ -68,6 +68,9 @@
   <ItemGroup>
     <Content Include="app\app.config.js" />
     <Content Include="app\controller\controllers.js" />
+    <Content Include="app\views\DepartmentEntry.tpl.html" />
+    <Content Include="app\views\DepartmentHome.tpl.html" />
+    <Content Include="app\views\DepartmentList.tpl.html" />
     <Content Include="app\views\entry.tpl.html" />
     <Content Include="app\views\home.tpl.html" />
     <Content Include="app\views\list.tpl.html" />
