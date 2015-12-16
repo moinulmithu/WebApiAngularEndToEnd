@@ -1,1 +1,19 @@
 ﻿List of Trainee
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Department Name</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <tr ng-repeat="t in Trainees">
+        <td>{{t.Id}}</td>
+        <td>{{t.Name}}</td>
+        <td>{{t.Phone}}</td>
+        <td>{{t.Department.Dept_Name}}</td>
+        <td>Edit</td>
+        <td>Delete</td>
+    </tr>
+</table>

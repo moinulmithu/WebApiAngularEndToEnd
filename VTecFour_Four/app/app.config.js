@@ -1,10 +1,7 @@
 ﻿//Create module             ** module is a kind of namespace means that all of the controllers will run under this namespace
-var app = angular.module('vt', ['ngRoute','ngResource']);
 
-//Preapare the routing throuh the configuration function
-//app.config(['Dependency Class Name',function(variable name of the object) {
-    
-//}]);
+var app = angular.module('vt', ['ngRoute', 'ngResource']);
+
 app.config([
     '$routeProvider', function ($routeProvider) {
         $routeProvider
@@ -16,3 +13,10 @@ app.config([
             .when('/DeptList', { templateUrl: 'app/views/DepartmentList.tpl.html', controller: 'studentListController' });
     }
 ]);
+
+
+
+//Preapare the routing throuh the configuration function
+//app.config(['Dependency Class Name',function(variable name of the object) {
+
+//}]);
