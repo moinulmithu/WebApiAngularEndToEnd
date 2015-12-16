@@ -1,4 +1,4 @@
-﻿app.controller('studentEntryController', ['$scope', '$resource', function ($scope, $resource) {
+﻿app.controller('traineeEntryController', ['$scope', '$resource', function ($scope, $resource) {
     $scope.departments = [];
     function LoadDepartment() {
         var Department = $resource('http://localhost:63817/api/department');
@@ -18,9 +18,9 @@
         console.log($scope.Trainee);
         //$scope.Trainee.DepartmentId = 1;
         //Send to Server
-        var Student = $resource('http://localhost:63817/api/Trainee');
+        var Trainee = $resource('http://localhost:63817/api/Trainee');
         //asynchronous operation
-        Student.save($scope.Trainee).$promise.then(function(response) {
+        Trainee.save($scope.Trainee).$promise.then(function(response) {
             if (response.isSuccess) {
                 initializeObjects();
             } else {
@@ -38,3 +38,17 @@
 
 }]);
 app.controller('studentListController', ['', function () { }]);
+app.controller('departmentEntryController', ['$scope','$resource', function($scope,$resource) {
+    $scope.saveDept = function () {
+        console.log($scope.Department);
+        var Department = $resource();
+        Department.saveDept($scope.Department).$promise.then(function(response) {
+            if (response.isSuccess) {
+                initializeObjects();
+            } else {
+                alert(response.message);
+            }
+        });
+
+    }
+}]);
