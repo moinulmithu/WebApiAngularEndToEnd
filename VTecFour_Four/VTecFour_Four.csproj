@@ -68,9 +68,15 @@
   <ItemGroup>
     <Content Include="app\app.config.js" />
     <Content Include="app\controller\controllers.js" />
+    <Content Include="app\views\CourseEntry.tpl.html" />
+    <Content Include="app\views\CourseHome.tpl.html" />
+    <Content Include="app\views\CourseList.tpl.html" />
     <Content Include="app\views\DepartmentEntry.tpl.html" />
     <Content Include="app\views\DepartmentHome.tpl.html" />
     <Content Include="app\views\DepartmentList.tpl.html" />
+    <Content Include="app\views\EnrollmentEntry.tpl.html" />
+    <Content Include="app\views\EnrollmentHome.tpl.html" />
+    <Content Include="app\views\EnrollmentList.tpl.html" />
     <Content Include="app\views\entry.tpl.html" />
     <Content Include="app\views\home.tpl.html" />
     <Content Include="app\views\list.tpl.html" />

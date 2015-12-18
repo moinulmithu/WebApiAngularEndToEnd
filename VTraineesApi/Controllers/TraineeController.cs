@@ -12,6 +12,16 @@ namespace VTraineesApi.Controllers
 {
     public class TraineeController : ApiController
     {
+        public ResponseModel Get()
+        {
+            VTraineesDBEntitiesOne db = new VTraineesDBEntitiesOne();
+            var Trainees =
+                db.Trainees.AsEnumerable()
+                    .Select(
+                        x => new Trainee() { Id = x.Id, Name = x.Name, Phone = x.Phone, DepartmentId = x.DepartmentId })
+                    .ToList();
+            return new ResponseModel(Trainees);
+        }
         public ResponseModel Post(Trainee trainee)
         {
             using (VTraineesDBEntitiesOne db = new VTraineesDBEntitiesOne())

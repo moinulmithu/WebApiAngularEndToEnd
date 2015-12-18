@@ -1,0 +1,15 @@
+﻿<h1>Enrollment Entry Page</h1>
+<table>
+    <tr>
+        <td>Trainee Name:</td>
+        <td><select ng-model="Enrollment.TraineeId" ng-options="t.Id as t.Name for t in trainees"></select></td>
+    </tr>
+    <tr>
+        <td>Course Name</td>
+        <td><select ng-model="Enrollment.CourseId" ng-options="c.Id as c.Name for c in courses"></select></td>
+    </tr>
+    <tr>
+        <td><button ng-click="save()">Save</button></td>
+        <td><button>Reset</button></td>
+    </tr>
+</table>

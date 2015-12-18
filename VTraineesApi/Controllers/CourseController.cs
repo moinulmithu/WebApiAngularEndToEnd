@@ -5,39 +5,38 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using System.Web.UI.WebControls;
 using DataAccess;
 using VTraineesApi.Models;
 
 namespace VTraineesApi.Controllers
 {
-    public class DepartmentController : ApiController
+    public class CourseController : ApiController
     {
         public ResponseModel Get()
         {
             VTraineesDBEntitiesOne db = new VTraineesDBEntitiesOne();
-            var departments =
-                db.Departments.AsEnumerable()
-                    .Select(x => new Department() {Id = x.Id, Dept_Name = x.Dept_Name})
+            var Courses =
+                db.Courses.AsEnumerable()
+                    .Select(
+                        x => new Course() {Id  = x.Id, Name = x.Name, Credit = x.Credit})
                     .ToList();
-            return new ResponseModel(departments);
+            return new ResponseModel(Courses);
         }
-
-        public ResponseModel Post(Department department)
+        public ResponseModel Post(Course course)
         {
-            using (VTraineesDBEntitiesOne db = new VTraineesDBEntitiesOne())
+            using(VTraineesDBEntitiesOne db = new VTraineesDBEntitiesOne())
             {
-                bool isNotNull = department != null;
+                bool isNotNull = db.Courses != null;
                 if (isNotNull)
                 {
-                    if (department.Id != 0)
+                    if (course.Id != 0)
                     {
-                        department.Trainees = null;
-                        db.Entry(department).State = EntityState.Modified;
+                        course.Enrollments = null;
+                        db.Entry(course).State = EntityState.Modified;
                     }
                     else
                     {
-                        db.Departments.Add(department);
+                        db.Courses.Add(course);
                     }
                     db.SaveChanges();
                 }
@@ -46,4 +45,3 @@ namespace VTraineesApi.Controllers
         }
     }
 }
-
