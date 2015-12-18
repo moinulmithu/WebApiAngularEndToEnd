@@ -38,17 +38,18 @@
 
 }]);
 app.controller('studentListController', ['', function () { }]);
-app.controller('departmentEntryController', ['$scope','$resource', function($scope,$resource) {
-    $scope.saveDept = function () {
-        console.log($scope.Department);
-        var Department = $resource();
-        Department.saveDept($scope.Department).$promise.then(function(response) {
-            if (response.isSuccess) {
-                initializeObjects();
-            } else {
-                alert(response.message);
-            }
-        });
+app.controller('departmentEntryController', ['$scope', '$resource', function ($scope, $resource) {
 
-    }
+    function initializeDeptObj() {
+        $scope.Department = {Id:0,Dept_Name:''}
+    } 
+    $scope.saveDept = function() {
+        console.log($scope.Department);
+        $scope.Department.Id = 6;
+        var Dept = $resource('http://localhost:63817/api/Department');
+        Dept.saveDept($scope.Department).$promise.then(function(response) {
+            console.log(response);
+        });
+    };
+    initializeDeptObj();
 }]);
