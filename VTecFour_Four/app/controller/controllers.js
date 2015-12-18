@@ -44,7 +44,24 @@
     initialize();
 
 }]);
-app.controller('studentListController', ['', function () { }]);
+app.controller('traineeListController', ['$scope','$resource', function ($scope,$resource) {
+    
+    function LoadTrainee() {
+        var Trainee = $resource('http://localhost:63817/api/Trainee');
+        Trainee.get().$promise.then(function (response) {
+            $scope.trainees = response.Data;
+            console.log($scope.trainees);
+        });
+    }
+    LoadTrainee();
+    $scope.delete = function(trainee) {
+        var Trainee = $resource('http://localhost:63817/api/Trainee');
+        Trainee.remove({ id: Trainee.Id }).$promise.then(function(response) {
+            LoadTrainee();
+        });
+    };
+
+}]);
 
 //===================Department=============================
 app.controller('departmentEntryController', ['$scope', '$resource', function ($scope, $resource) {

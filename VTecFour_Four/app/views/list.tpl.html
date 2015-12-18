@@ -8,12 +8,12 @@
         <th>Edit</th>
         <th>Delete</th>
     </tr>
-    <tr ng-repeat="t in Trainees">
+    <tr ng-repeat="t in trainees">
         <td>{{t.Id}}</td>
         <td>{{t.Name}}</td>
         <td>{{t.Phone}}</td>
         <td>{{t.Department.Dept_Name}}</td>
-        <td>Edit</td>
-        <td>Delete</td>
+        <td><a href="/#/entry/{{t.Id}}">Edit</a></td>
+        <td><button ng-click="delete(t)">Delete</button></td>
     </tr>
 </table>
