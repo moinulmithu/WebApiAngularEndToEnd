@@ -1,1 +1,13 @@
 ﻿<h1>Enrollment List</h1>
+<table>
+    <tr>
+        <th>Trainee Id</th>
+        <th>Course Id</th>
+    </tr>
+    <tr ng-repeat="e in enrollments">
+        <td>{{e.TraineeId}}</td>
+        <td>{{e.CourseId}}</td>
+        <td><a href="/#/EnrollmentEntry">Edit</a></td>
+        <td><button ng-click="delete(e)">Delete</button></td>
+    </tr>
+</table>

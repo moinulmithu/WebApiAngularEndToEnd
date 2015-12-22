@@ -1,1 +1,15 @@
 ﻿<h1>Course List</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Credit</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <tr ng-repeat="c in courses">
+        <td>{{c.Name}}</td>
+        <td>{{c.Credit}}</td>
+        <td><a href="/#/CourseEntry">Edit</a></td>
+        <td><button ng-click="delete(c)">Delete</button></td>
+    </tr>
+</table>

@@ -18,9 +18,30 @@ namespace VTraineesApi.Controllers
             var Courses =
                 db.Courses.AsEnumerable()
                     .Select(
-                        x => new Course() {Id  = x.Id, Name = x.Name, Credit = x.Credit})
+                        x => new Course() { Id = x.Id, Name = x.Name, Credit = x.Credit })
                     .ToList();
             return new ResponseModel(Courses);
+        }
+        public ResponseModel Get(int id)
+        {
+            VTraineesDBEntitiesOne db = new VTraineesDBEntitiesOne();
+            ResponseModel response;
+            Course c = db.Courses.Find(id);
+            if (c != null)
+            {
+                Course course = new Course()
+                {
+                    Id = c.Id,
+                    Name = c.Name,
+                    Credit = c.Credit
+                };
+                return  new ResponseModel(course);
+            }
+            else
+            {
+                response = new ResponseModel(isSuccess:false,message:"Course not found");
+            }
+            return response;
         }
         public ResponseModel Post(Course course)
         {
@@ -42,6 +63,23 @@ namespace VTraineesApi.Controllers
                 }
                 return new ResponseModel(isSuccess:isNotNull);
             }
+        }
+
+        public ResponseModel Delete(int id)
+        {
+            ResponseModel response;   
+            if (id != 0)
+            {
+                VTraineesDBEntitiesOne db = new VTraineesDBEntitiesOne();
+                db.Courses.Remove(db.Courses.Find(id));
+                db.SaveChanges();
+                return new ResponseModel();
+            }
+            else
+            {
+                response = new ResponseModel(isSuccess:false,message:"Course Not Found");
+            }
+            return response;
         }
     }
 }

@@ -15,12 +15,44 @@ namespace VTraineesApi.Controllers
         public ResponseModel Get()
         {
             VTraineesDBEntitiesOne db = new VTraineesDBEntitiesOne();
-            var Trainees =
+            List<Trainee> trainees =
                 db.Trainees.AsEnumerable()
                     .Select(
-                        x => new Trainee() { Id = x.Id, Name = x.Name, Phone = x.Phone, DepartmentId = x.DepartmentId })
+                        x =>
+                            new Trainee()
+                            {
+                                Id = x.Id,
+                                Name = x.Name,
+                                Phone = x.Phone,
+                                DepartmentId = x.DepartmentId,
+                                Department = new Department() { Id = x.Department.Id, Dept_Name = x.Department.Dept_Name }
+                            })
                     .ToList();
-            return new ResponseModel(Trainees);
+            return new ResponseModel(trainees);
+        }
+
+        public ResponseModel Get(int id)
+        {
+            VTraineesDBEntitiesOne db = new VTraineesDBEntitiesOne();
+            ResponseModel response;
+            Trainee x = db.Trainees.Find(id);
+            if (x != null)
+            {
+                Trainee trainee = new Trainee()
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Phone = x.Phone,
+                    DepartmentId = x.DepartmentId,
+                    Department = new Department() {Id = x.Department.Id, Dept_Name = x.Department.Dept_Name}
+                };
+                response = new ResponseModel(trainee);
+            }
+            else
+            {
+                response = new ResponseModel(isSuccess:false,message:"Trainee not found");
+            }
+            return response;
         }
         public ResponseModel Post(Trainee trainee)
         {
@@ -44,6 +76,23 @@ namespace VTraineesApi.Controllers
                 return new ResponseModel(isSuccess: isNotNull);
             }
             
+        }
+
+        public ResponseModel Delete(int id)
+        {
+            ResponseModel response;
+            if (id != 0)
+            {
+                VTraineesDBEntitiesOne db = new VTraineesDBEntitiesOne();
+                db.Trainees.Remove(db.Trainees.Find(id));
+                db.SaveChanges();
+                return new ResponseModel();
+            }
+            else
+            {
+                response = new ResponseModel(isSuccess:false,message:"Trainee not found");
+            }
+            return response;
         }
     }
 }

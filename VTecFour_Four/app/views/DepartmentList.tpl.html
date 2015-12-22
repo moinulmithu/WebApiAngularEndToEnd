@@ -1,1 +1,13 @@
 ﻿<h1>Department List</h1>
+<table>
+    <tr>
+        <th>Department Name</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <tr ng-repeat="d in departments">
+        <td>{{d.Dept_Name}}</td>
+        <td><a href="/#/DeptEntry">Edit</a></td>
+        <td><button ng-click="delete(d)">Delete</button></td>
+    </tr>
+</table>
